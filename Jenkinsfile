@@ -63,6 +63,16 @@ stage('Deploy') {
         	//}
 		}
 		}
+	    
+	    stage('sonar'){
+		    steps{
+			 echo 'sonar'
+			 withSonarQubeEnv('SonarQube') {
+    		// some block
+        	
+          sh "mvn sonar:sonar"
+		}
+		}
          
   
     }
