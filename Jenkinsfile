@@ -73,7 +73,7 @@ stage('Deploy') {
           sh "mvn sonar:sonar"
 		}
 		}
-         
+	    }
   
     }
 }
